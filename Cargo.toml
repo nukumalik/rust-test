@@ -1,0 +1,16 @@
+[package]
+name = "rust-test"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+async-trait = "0.1.83"
+mockall = "0.13.1"
+sqlx = { version = "0.8.2", features = [
+  "runtime-tokio",
+  "tls-native-tls",
+  "sqlite",
+  "derive",
+  "macros",
+] }
+tokio = { version = "1.42.0", features = ["full"] }
